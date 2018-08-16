@@ -25,3 +25,9 @@ VocBench 3-3.0.1.
 docker build --rm -f vocbench3-3.0.1.Dockerfile -t vocbench:3-3.0.1 .
 docker run --rm -d -p 1979:1979 vocbench:3-3.0.1
 ```
+
+## Pull image from Docker and run
+
+```bash
+docker run --rm -it -p 1979:1979 matthieubosquet/vocbench:latest
+```

@@ -17,3 +17,14 @@ cat ./password.txt | docker login --username <azure-container-registry-name> --p
 docker push <azure-container-registry-name>.azurecr.io/<image-name>:<image-tag>
 ```
 
+## Docker image in Docker Hub
+
+- Tag image with Docker Hub username
+- Login to Docker Hub
+- Push image to Docker Hub
+
+```bash
+docker tag <image-name>:<image-tag> <docker-hub-username>/<image-name>:<image-tag>
+docker login --username <docker-hub-username>
+docker push <docker-hub-username>/<image-name>:<image-tag>
+```
