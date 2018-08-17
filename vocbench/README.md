@@ -1,15 +1,5 @@
 # Vocbench in a Docker container
 
-## Install Docker
-
-First, install Docker (e.g. on MacOS with homebrew).
-
-```bash
-brew cask install docker
-```
-
-Launch docker.
-
 ## Create image & run
 
 VocBench 3-4.0.2 (run detached, this version stops).

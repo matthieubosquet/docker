@@ -1,5 +1,16 @@
-# docker
-Some containers
+# Docker
+
+Some containers.
+
+## Install Docker
+
+First, install Docker (e.g. on MacOS with homebrew).
+
+```bash
+brew cask install docker
+```
+
+Launch docker.
 
 ## Docker containers in Azure
 
