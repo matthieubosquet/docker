@@ -11,7 +11,7 @@
 # Start container:
 # docker run --rm -d -p 8080:8080 matthieubosquet/webvowl:latest
 
-# Use maven alpine as base image
+# Use tomcat java 8 alpine as base image
 FROM tomcat:9-jre8-alpine
 
 # Download WebVOWL to tomcat webapps directory as root app
