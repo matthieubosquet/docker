@@ -1,14 +1,17 @@
 ###############
 # Jena Fuseki #
-# #############
-#
-# Build image:
+###############
+
+# Build image
 # docker build --rm -f jena-fuseki.Dockerfile -t jena-fuseki:latest .
-# Tag image (docker hub):
+
+# Tag image (i.e. to publish to Docker Hub)
 # docker tag jena-fuseki:latest matthieubosquet/jena-fuseki:latest
-# Push to docker hub:
+
+# Push to Docker Hub
 # docker push matthieubosquet/jena-fuseki:latest
-# Start container:
+
+# Start container
 # docker run --rm -d -p 8080:8080 matthieubosquet/jena-fuseki:latest
 
 # Use tomcat jre 8 alpine as base image

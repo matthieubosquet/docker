@@ -1,12 +1,13 @@
 #########################################
 # Cow says fortunes beautiful container #
 #########################################
-#
-# Build image:
+
+# Build image
 # docker build --rm -f cowsay-fortune.Dockerfile -t cowsay-fortune:latest .
-# Start container with --rm to remove it on exit:
+
+# Start container (with --rm to remove it on exit)
 # docker run --rm -it cowsay-fortune:latest.
-#
+
 # Use latest debian as base image
 FROM debian:latest
 
