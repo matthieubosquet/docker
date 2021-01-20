@@ -26,5 +26,11 @@ RUN npm run build
 # Container data dir for volume sharing (passed through -f option below)
 RUN mkdir /data
 
+# Create a mount point (not sure it's really better)
+#VOLUME [ "/data" ]
+
+# Informs Docker that the container listens on the specified network port at runtime
+EXPOSE 3000
+
 # Set command run by the container
 ENTRYPOINT [ "node", "/community-server/bin/server.js", "-c", "config/config-file.json", "-f", "/data", "-p", "3000" ]
