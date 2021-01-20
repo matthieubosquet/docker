@@ -14,7 +14,7 @@
 # docker run --rm --network host -it comunica-sparql:latest http://localhost:3000/foo "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
 
 # Debug container
-# docker run --rm -v ${PWD}:/query -it --entrypoint /bin/sh comunica-sparql:latest
+# docker run --rm -v ${PWD}:/query -it --entrypoint /bin/bash comunica-sparql:latest
 
 # Use latest node 12 base image
 FROM node:12
