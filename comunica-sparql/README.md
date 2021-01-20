@@ -1,5 +1,9 @@
 # Comunica SPARQL
 
+Run SPARQL queries over RDF resources using Comunica's SPARQL CLI tool.
+
+See: https://hub.docker.com/r/matthieubosquet/comunica-sparql
+
 ## Run SPARQL queries over RDF resources
 
 ```bash
