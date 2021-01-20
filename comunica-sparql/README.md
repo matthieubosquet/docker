@@ -3,7 +3,7 @@
 ## Run SPARQL queries over RDF resources
 
 ```bash
-docker run --rm -it comunica-sparql:latest https://fragments.dbpedia.org/2016-04/en "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
+docker run --rm -it matthieubosquet/comunica-sparql:latest https://fragments.dbpedia.org/2016-04/en "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
 ```
 
 ## Pass in the query through a local file
