@@ -1,6 +1,6 @@
 # Comunica SPARQL
 
-Run SPARQL queries over RDF resources using Comunica's SPARQL CLI tool.
+Run SPARQL queries over RDF resources using [Comunica's SPARQL CLI tool](https://comunica.dev/docs/query/getting_started/query_cli/).
 
 See: https://hub.docker.com/r/matthieubosquet/comunica-sparql
 
