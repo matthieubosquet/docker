@@ -25,7 +25,7 @@ docker run --rm -v ~/SPARQL:/query -it matthieubosquet/comunica-sparql:latest ht
 Use `comunica-sparql-file` instead!
 
 ```bash
-docker run --rm -v ${PWD}:/query -it comunica-sparql-file:latest test.ttl "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
+docker run --rm -v ${PWD}:/query -it matthieubosquet/comunica-sparql-file:latest test.ttl "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
 ```
 
 ## For programming
