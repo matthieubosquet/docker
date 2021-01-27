@@ -2,7 +2,7 @@ name: Publish Docker image
 
 on:
   push:
-    branches: [master]
+    branches: [ main ]
 
 jobs:
   push_to_registries:
@@ -36,5 +36,5 @@ jobs:
           file: ./solid-community-fileserver/solid-community-fileserver.Dockerfile
           push: true
           tags: |
-            matthieubosquet/docker:solid-community-fileserver:${{ env.RELEASE_VERSION }}
-            matthieubosquet/docker:solid-community-fileserver:latest
+            matthieubosquet/docker:solid-community-fileserver-${{ env.RELEASE_VERSION }}
+            matthieubosquet/docker:solid-community-fileserver-latest
