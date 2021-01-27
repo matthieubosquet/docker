@@ -29,6 +29,5 @@ jobs:
         with:
           context: .
           file: ./solid-community-fileserver/solid-community-fileserver.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/386
           push: true
           tags: user/app:latest
