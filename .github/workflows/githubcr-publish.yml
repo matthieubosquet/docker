@@ -1,8 +1,11 @@
-name: Publish Docker image
+name: Publish Docker images
 
 on:
-  release:
-    types: [ published ]
+  push:
+    branches: [ main ]
+
+env:
+  IMAGE_NAME: solid-community-server
 
 jobs:
   push_to_registries:
@@ -36,5 +39,5 @@ jobs:
           file: ./solid-community-fileserver/solid-community-fileserver.Dockerfile
           push: true
           tags: |
-            ghcr.io/matthieubosquet/solid-community-fileserver:${{ env.RELEASE_VERSION }}
-            ghcr.io/matthieubosquet/solid-community-fileserver:latest
+            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:filestorage-${{ env.RELEASE_VERSION }}
+            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:filestorage-latest
