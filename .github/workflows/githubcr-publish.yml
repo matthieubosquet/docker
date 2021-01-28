@@ -36,5 +36,5 @@ jobs:
           file: ./solid-community-fileserver/solid-community-fileserver.Dockerfile
           push: true
           tags: |
-            matthieubosquet/docker:css-${{ env.RELEASE_VERSION }}
-            matthieubosquet/docker:css-latest
+            ghcr.io/matthieubosquet/docker:solid-community-fileserver-${{ env.RELEASE_VERSION }}
+            ghcr.io/matthieubosquet/docker:solid-community-fileserver-latest
