@@ -3,7 +3,7 @@
 #####################################################
 
 # Build image
-# docker build --rm -f solid-community-fileserver.Dockerfile -t solid-community-fileserver:latest .
+# docker build --rm -f solid-community-fileserver.Dockerfile -t solid-community-server:latest .
 
 # Run the server against your current user's Solid directory
 # docker run --rm -v ~/Solid:/data -p 3000:3000 -it ghcr.io/matthieubosquet/solid-community-server:latest
@@ -14,12 +14,16 @@
 # Use latest node LTS base image
 FROM node:lts
 
+LABEL maintainer=matthieubosquet@gmail.com
+
 ARG branch=master
 
 # Clone the latest community server & install
 RUN git clone --branch $branch https://github.com/solid/community-server.git
 
 WORKDIR /community-server
+
+RUN npm audit --production --audit-level=high
 
 RUN npm ci
 
