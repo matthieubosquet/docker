@@ -6,7 +6,7 @@
 # docker build --rm -f solid-community-fileserver.Dockerfile -t solid-community-fileserver:latest .
 
 # Run the server against your current user's Solid directory
-# docker run --rm -v ~/Solid:/data -p 3000:3000 -it matthieubosquet/solid-community-server:latest
+# docker run --rm -v ~/Solid:/data -p 3000:3000 -it ghcr.io/matthieubosquet/solid-community-server:latest
 
 # Debug container
 # docker run --rm -v ~/Solid:/data -it --entrypoint /bin/bash solid-community-server:latest
@@ -14,14 +14,14 @@
 # Use latest node LTS base image
 FROM node:lts
 
+ARG branch=master
+
 # Clone the latest community server & install
-RUN git clone https://github.com/solid/community-server.git
+RUN git clone --branch $branch https://github.com/solid/community-server.git
 
 WORKDIR /community-server
 
 RUN npm ci
-
-RUN npm run build
 
 # Container config & data dir for volume sharing
 # Defaults to filestorage with /data directory (passed through CMD below)
