@@ -16,10 +16,8 @@ FROM node:lts
 
 LABEL maintainer=matthieubosquet@gmail.com
 
-ARG branch=master
-
 # Clone the latest community server & install
-RUN git clone --branch $branch https://github.com/solid/community-server.git
+RUN git clone https://github.com/solid/community-server.git
 
 WORKDIR /community-server
 
