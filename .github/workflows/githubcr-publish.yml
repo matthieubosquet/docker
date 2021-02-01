@@ -37,6 +37,7 @@ jobs:
         with:
           context: .
           file: ./${{ env.IMAGE_NAME }}/${{ env.IMAGE_NAME }}.Dockerfile
+          build-args: branch=${{ env.RELEASE_VERSION }}
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
